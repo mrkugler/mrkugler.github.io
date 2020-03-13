@@ -400,7 +400,7 @@ button:hover {
 
 .service-item1:hover {
     background-image: url(../images/service1new.png);
-
+    background-repeat: no-repeat;
 }
 
 .service-item1:hover h4 {
@@ -447,6 +447,7 @@ button:hover {
 
 .service-item2:hover {
     background-image: url(../images/service2new.png);
+    background-repeat: no-repeat;
 }
 
 .service-item2:hover h4 {
@@ -493,6 +494,7 @@ button:hover {
 
 .service-item3:hover {
     background-image: url(../images/service3new.png);
+    background-repeat: no-repeat;
 }
 
 .service-item3:hover h4 {
@@ -539,6 +541,7 @@ button:hover {
 
 .service-item4:hover {
     background-image: url(../images/service4new.png);
+    background-repeat: no-repeat;
 }
 
 .service-item4:hover h4 {
