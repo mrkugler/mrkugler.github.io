@@ -29,6 +29,12 @@ https://templatemo.com/tm-531-reflux
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
     <link rel="icon" href="favicon.png" type="image/x-icon"/>
+
+        <script>
+	function thanks() {
+		alert("Thank you for your message. I'll get back to you as soon as possible!");
+	}
+</script> 
   </head>
 
   <body>
@@ -350,15 +356,15 @@ https://templatemo.com/tm-531-reflux
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="mailto:mrkugler@pitt.edu" method="post">
+                <form id="contact">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
                         <input
-                          name="name"
+                          name="Name"
                           type="text"
                           class="form-control"
-                          id="name"
+                          id="Name"
                           placeholder="Your name..."
                           required=""
                         />
@@ -367,10 +373,10 @@ https://templatemo.com/tm-531-reflux
                     <div class="col-md-6">
                       <fieldset>
                         <input
-                          name="email"
+                          name="Email"
                           type="text"
                           class="form-control"
-                          id="email"
+                          id="Email"
                           placeholder="Your email..."
                           required=""
                         />
@@ -379,10 +385,10 @@ https://templatemo.com/tm-531-reflux
                     <div class="col-md-12">
                       <fieldset>
                         <input
-                          name="subject"
+                          name="Subject"
                           type="text"
                           class="form-control"
-                          id="subject"
+                          id="Subject"
                           placeholder="Subject..."
                           required=""
                         />
@@ -391,10 +397,10 @@ https://templatemo.com/tm-531-reflux
                     <div class="col-md-12">
                       <fieldset>
                         <textarea
-                          name="message"
+                          name="Message"
                           rows="6"
                           class="form-control"
-                          id="message"
+                          id="Message"
                           placeholder="Your message..."
                           required=""
                         ></textarea>
@@ -402,13 +408,24 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">
+                        <button type="submit" id="form-submit" class="button" onClick="thanks()">
                           Send Message
                         </button>
                       </fieldset>
                     </div>
                   </div>
                 </form>
+                                <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzTlgqrs7I8S2sErHyUqD7xCr_8sQbw4OHNGALLUQiXR6PUTXld/exec'
+  const form = document.forms['contact']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
               </div>
             </div>
           </div>
